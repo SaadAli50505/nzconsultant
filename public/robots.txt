@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nzconsultants.com.au/sitemap.xml

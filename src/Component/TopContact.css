@@ -1,0 +1,40 @@
+/* TopContact.css */
+.top-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #201f70;
+    padding: 1px 20px;
+    flex-wrap: wrap;
+    color: white;
+  }
+  
+  .contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex: 1 1 20%; /* Grow to fill available space and wrap */
+  }
+  
+  .contact-item svg {
+    margin-right: 5px;
+  }
+  
+  .contact-text {
+    margin-left: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .top-contact {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .contact-item {
+      flex: 1 1 100%; /* Take full width on smaller screens */
+      margin: 5px 0;
+    }
+  }
+  

@@ -1,0 +1,152 @@
+/* Base styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 2rem;
+  background-color: #ffffff;
+  color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.dropdown div:hover {
+  color: #2c2c2c;
+  border-bottom: 3px solid #201f70;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0%;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar-item a {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.navbar-item a:hover {
+  color: #2c2c2c;
+  border-bottom: 3px solid #201f70;
+}
+
+.contact-button {
+  background-color: #ee3537;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  
+}
+
+.contact-button:hover {
+  background-color: #ee3537;
+  color: white;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+}
+.dropdown-menu-sub {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+}
+.dropdown-item {
+  padding: 8px 16px;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.dropdown-item a:hover {
+  background-color: #ddd;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  .logo {
+    height: 100px;
+    width: 100px;
+    margin-top: 7px;
+    margin-bottom: 0px;
+    margin-left: -20px;
+  }
+}

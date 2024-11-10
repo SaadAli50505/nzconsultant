@@ -1,0 +1,136 @@
+.pr-steps-container {
+  position: relative; /* Ensure the container is positioned relative for the overlay */
+  text-align: center;
+  width: 100%;
+  background-color: #201f70ad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  background-image: url("./img/pr4.jpg"); /* Add this line */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  overflow: hidden; /* Ensure the overlay stays within the container */
+}
+
+.pr-steps-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.433); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensure the overlay is above the background image but below the content */
+}
+
+.pr-steps-content {
+  position: relative; /* Ensure the content is positioned above the overlay */
+  z-index: 2; /* Ensure the content is above the overlay */
+}
+
+.pr-steps-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  color: #ffffff;
+  font-weight: 700;
+  /* background-color: #00000075; */
+}
+
+.steps-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.step-box {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.step-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.734); /* Black overlay with 50% opacity */
+  border-radius: 10px;
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.step-box * {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+}
+
+.step-box1 {
+  background-image: url("./img//pr1.jpg");
+}
+.step-box2 {
+  background-image: url("./img//pr2.jpg");
+}
+.step-box3 {
+  background-image: url("./img//pr3.jpg");
+}
+.step-box4 {
+  background-image: url("./img//pr4.jpg");
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #201f70;
+  margin-right: 20px;
+}
+
+.step-box-logo-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.step-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  color: #000000;
+}
+
+.step-box > div > div:last-child {
+  text-align: left;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .step-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-box {
+    width: 100%;
+    justify-content: center;
+  }
+}
