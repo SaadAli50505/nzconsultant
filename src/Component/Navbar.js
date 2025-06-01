@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "./img/logo/Screenshot 2024-09-22 102007.png";
+import logo from "./img/logo/logo.jpg";
 import { Helmet } from "react-helmet";
 
 const Navbar = () => {
@@ -10,14 +10,16 @@ const Navbar = () => {
     services: false,
     consultancy: false,
     pathway: false,
-    tradeCourses: false, // State for the third-level dropdown
+    tradeCourses: false,
+    countries: false, // Add new state for countries dropdown
   });
 
   const dropdownRefs = {
     services: useRef(null),
     consultancy: useRef(null),
     pathway: useRef(null),
-    tradeCourses: useRef(null), // Ref for the third-level dropdown
+    tradeCourses: useRef(null),
+    countries: useRef(null), // Add new ref for countries dropdown
   };
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -45,7 +47,8 @@ const Navbar = () => {
     document.addEventListener("click", (e) => closeDropdown("services", e));
     document.addEventListener("click", (e) => closeDropdown("consultancy", e));
     document.addEventListener("click", (e) => closeDropdown("pathway", e));
-    document.addEventListener("click", (e) => closeDropdown("tradeCourses", e)); // Add event listener for the third-level dropdown
+    document.addEventListener("click", (e) => closeDropdown("tradeCourses", e));
+    document.addEventListener("click", (e) => closeDropdown("countries", e)); // Add event listener for countries
     return () => {
       document.removeEventListener("click", (e) =>
         closeDropdown("services", e)
@@ -56,7 +59,10 @@ const Navbar = () => {
       document.removeEventListener("click", (e) => closeDropdown("pathway", e));
       document.removeEventListener("click", (e) =>
         closeDropdown("tradeCourses", e)
-      ); // Remove event listener for the third-level dropdown
+      );
+      document.removeEventListener("click", (e) =>
+        closeDropdown("countries", e)
+      ); // Remove event listener for countries
     };
   }, []);
 
@@ -70,13 +76,75 @@ const Navbar = () => {
         />
       </Helmet>
       <div className="navbar-logo">
-        <img className="logo" src={logo} alt="NZ Education Consultants" />
+        <img
+          onClick={() => {
+            setIsOpen(false);
+            window.location.href = "/";
+          }}
+          className="logo"
+          src={logo}
+          alt="NZ Education Consultants"
+        />
       </div>
       <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
         <li className="navbar-item">
           <Link to="/" onClick={() => setIsOpen(false)}>
             Home
           </Link>
+        </li>
+        <li className="navbar-item dropdown" ref={dropdownRefs.countries}>
+          <div onClick={() => toggleDropdown("countries")}>
+            Study Abroad &#x25BC;
+          </div>
+          {isDropdownOpen.countries && (
+            <ul className="dropdown-menu">
+              <li className="dropdown-item">
+                <Link to="/australia" onClick={() => setIsOpen(false)}>
+                  Australia
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/uk" onClick={() => setIsOpen(false)}>
+                  United Kingdom
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/newzealand" onClick={() => setIsOpen(false)}>
+                  New Zealand
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/germany" onClick={() => setIsOpen(false)}>
+                  Germany
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/cyprus" onClick={() => setIsOpen(false)}>
+                  Cyprus
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/canada" onClick={() => setIsOpen(false)}>
+                  Canada
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/usa" onClick={() => setIsOpen(false)}>
+                  USA
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/georgia" onClick={() => setIsOpen(false)}>
+                  Georgia
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/lithuania" onClick={() => setIsOpen(false)}>
+                  Lithuania
+                </Link>
+              </li>
+            </ul>
+          )}
         </li>
         <li className="navbar-item dropdown" ref={dropdownRefs.consultancy}>
           <div onClick={() => toggleDropdown("consultancy")}>
@@ -98,7 +166,9 @@ const Navbar = () => {
           )}
         </li>
         <li className="navbar-item dropdown" ref={dropdownRefs.pathway}>
-          <div onClick={() => toggleDropdown("pathway")}>Pathway Programs &#x25BC;</div>
+          <div onClick={() => toggleDropdown("pathway")}>
+            Pathway Programs &#x25BC;
+          </div>
           {isDropdownOpen.pathway && (
             <ul className="dropdown-menu">
               <li
@@ -191,7 +261,9 @@ const Navbar = () => {
           )}
         </li>
         <li className="navbar-item dropdown" ref={dropdownRefs.services}>
-          <div onClick={() => toggleDropdown("services")}>Services &#x25BC;</div>
+          <div onClick={() => toggleDropdown("services")}>
+            Services &#x25BC;
+          </div>
           {isDropdownOpen.services && (
             <ul className="dropdown-menu">
               <li className="dropdown-item">

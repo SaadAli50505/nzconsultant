@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  FaPhoneAlt,
-  FaWhatsapp,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import "./TopContact.css"; // Import the CSS file
 import { Helmet } from "react-helmet";
 const TopContact = () => {
@@ -18,23 +14,15 @@ const TopContact = () => {
       </Helmet>
       <div className="contact-item">
         <FaPhoneAlt />
-        <div className="contact-text">
-          Call Us: 0 451 932 175
-
-        </div>
+        <div className="contact-text">Call Us: +61 451 935 923</div>
       </div>
       <div className="contact-item">
         <FaWhatsapp />
-        <div className="contact-text">
-          WhatsApp: +61 451 935 923
-
-        </div>
+        <div className="contact-text">WhatsApp: +61 451 935 923</div>
       </div>
       <div className="contact-item">
         <FaEnvelope />
-        <div className="contact-text">
-        Info@nzconsultants.com.au
-        </div>
+        <div className="contact-text">Info@nzconsultants.com.au</div>
       </div>
     </div>
   );

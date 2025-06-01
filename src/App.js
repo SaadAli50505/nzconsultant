@@ -21,6 +21,19 @@ import TradeCourses from "./Component/pages/TradeCourses";
 import NonTradeCourses from "./Component/pages/NonTradeCourses";
 import JRP from "./Component/pages/JRP";
 import OtherServices from "./Component/pages/OtherServices";
+import OurPartner from "./Component/OurPartner";
+import EnroleNow from "./Component/EnroleNow";
+
+// Country Pages
+import Australia from "./Component/countries/Australia";
+import UK from "./Component/countries/UK";
+import NewZealand from "./Component/countries/NewZealand";
+import Germany from "./Component/countries/Germany";
+import Cyprus from "./Component/countries/Cyprus";
+import Canada from "./Component/countries/Canada";
+import USA from "./Component/countries/USA";
+import Georgia from "./Component/countries/Georgia";
+import Lithuania from "./Component/countries/Lithuania";
 
 function App() {
   return (
@@ -53,6 +66,9 @@ function App() {
                 <div id="pr">
                   <StepsTowardPr />
                 </div>
+                <div id="our-partner">
+                  <OurPartner />
+                </div>
                 <div id="client">
                   <ClientTrust />
                 </div>
@@ -79,7 +95,9 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Student Dependent Visa - NZ Education Consultants</title>
+                  <title>
+                    Student Dependent Visa - NZ Education Consultants
+                  </title>
                   <meta
                     name="description"
                     content="Guidance on getting a dependent visa for students in Australia."
@@ -160,7 +178,7 @@ function App() {
                     content="Find the right course for your studies in Australia with our assistance."
                   />
                 </Helmet>
-                < OtherServices/>
+                <OtherServices />
               </>
             }
           />
@@ -229,7 +247,9 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Job Ready Program (JRP) - NZ Education Consultants</title>
+                  <title>
+                    Job Ready Program (JRP) - NZ Education Consultants
+                  </title>
                   <meta
                     name="description"
                     content="Details about the Job Ready Program for international students in Australia."
@@ -239,7 +259,146 @@ function App() {
               </>
             }
           />
+          {/* Country Routes */}
+          <Route
+            path="/australia"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in Australia - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in Australia with NZ Education Consultants."
+                  />
+                </Helmet>
+                <Australia />
+              </>
+            }
+          />
+          <Route
+            path="/uk"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in UK - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in the United Kingdom with NZ Education Consultants."
+                  />
+                </Helmet>
+                <UK />
+              </>
+            }
+          />
+          <Route
+            path="/newzealand"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in New Zealand - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in New Zealand with NZ Education Consultants."
+                  />
+                </Helmet>
+                <NewZealand />
+              </>
+            }
+          />
+          <Route
+            path="/germany"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in Germany - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in Germany with NZ Education Consultants."
+                  />
+                </Helmet>
+                <Germany />
+              </>
+            }
+          />
+          <Route
+            path="/cyprus"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in Cyprus - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in Cyprus with NZ Education Consultants."
+                  />
+                </Helmet>
+                <Cyprus />
+              </>
+            }
+          />
+          <Route
+            path="/canada"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in Canada - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in Canada with NZ Education Consultants."
+                  />
+                </Helmet>
+                <Canada />
+              </>
+            }
+          />
+          <Route
+            path="/usa"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in USA - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in the United States with NZ Education Consultants."
+                  />
+                </Helmet>
+                <USA />
+              </>
+            }
+          />
+          <Route
+            path="/georgia"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in Georgia - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in Georgia with NZ Education Consultants."
+                  />
+                </Helmet>
+                <Georgia />
+              </>
+            }
+          />
+          <Route
+            path="/lithuania"
+            element={
+              <>
+                <Helmet>
+                  <title>Study in Lithuania - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Explore world-class education opportunities in Lithuania with NZ Education Consultants."
+                  />
+                </Helmet>
+                <Lithuania />
+              </>
+            }
+          />
         </Routes>
+        <div id="enroll-now">
+          <EnroleNow />
+        </div>
         <div id="footer">
           <Footer />
         </div>

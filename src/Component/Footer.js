@@ -25,14 +25,12 @@ const Footer = () => {
           <div className="footer-section">
             <FaPhoneAlt className="footer-icon" />
             <h3>Call Us</h3>
-            <p>Australia: 0 451 932 175
-</p>
+            <p>Australia: +61 451 935 923</p>
           </div>
           <div className="footer-section">
             <FaWhatsapp className="footer-icon" />
             <h3>Chat via WhatsApp</h3>
-            <p>Australia: +61 451 935 923
-</p>
+            <p>Australia: +61 451 935 923</p>
           </div>
           <div className="footer-section">
             <FaEnvelope className="footer-icon" />
