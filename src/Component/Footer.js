@@ -22,11 +22,44 @@ const Footer = () => {
           Contact Us
         </h1>
         <footer className="footer">
+          {/* Head Office */}
           <div className="footer-section">
-            <FaPhoneAlt className="footer-icon" />
-            <h3>Call Us</h3>
-            <p>Australia: +61 451 935 923</p>
+            <FaMapMarkerAlt className="footer-icon" />
+            <h3>Head Office</h3>
+            <p>26 Montacute Rd, Hectorville SA 5073</p>
+            <div className="footer-phone-line">
+              <FaPhoneAlt className="footer-icon-sm" />
+              <span>+61 451 935 923</span>
+            </div>
           </div>
+          {/* Sub Office 1 */}
+          <div className="footer-section">
+            <FaMapMarkerAlt className="footer-icon" />
+            <h3>Office Branch #1</h3>
+            <p>
+              Madrianwala Chowk, Opposite, Al - Haadi Resturent, Sargodha Road
+              Hafizabad, Punjab Pakistan
+            </p>
+            <div className="footer-phone-line">
+              <FaPhoneAlt className="footer-icon-sm" />
+              <span>+92 312 8880804</span>
+            </div>
+            <div className="footer-phone-line">
+              <FaPhoneAlt className="footer-icon-sm" />
+              <span>+92 328 5987998</span>
+            </div>
+          </div>
+          {/* Sub Office 2 */}
+          <div className="footer-section">
+            <FaMapMarkerAlt className="footer-icon" />
+            <h3>Office Branch #2</h3>
+            <p>College Road, U Bank Basemen, Sheikhupura, Punjab Pakistan</p>
+            <div className="footer-phone-line">
+              <FaPhoneAlt className="footer-icon-sm" />
+              <span>+92 300 4238712</span>
+            </div>
+          </div>
+          {/* WhatsApp, Email */}
           <div className="footer-section">
             <FaWhatsapp className="footer-icon" />
             <h3>Chat via WhatsApp</h3>
@@ -37,12 +70,12 @@ const Footer = () => {
             <h3>Email Us</h3>
             <p>Info@nzconsultants.com.au</p>
           </div>
-          <div className="footer-section">
-            <FaMapMarkerAlt className="footer-icon" />
-            <h3>Office Location</h3>
-            <p>26 Montacute Rd, Hectorville SA 5073</p>
-          </div>
         </footer>
+
+        <div className="footer-copyright">
+          &copy; {new Date().getFullYear()} NZ Education Consultants. All rights
+          reserved.
+        </div>
       </div>
     </>
   );

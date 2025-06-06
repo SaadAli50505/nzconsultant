@@ -2,6 +2,8 @@ import React from "react";
 import { FaPhoneAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import "./TopContact.css"; // Import the CSS file
 import { Helmet } from "react-helmet";
+
+import ContactBarFlags from "./ContactBarFlags";
 const TopContact = () => {
   return (
     <div className="top-contact">
@@ -24,6 +26,7 @@ const TopContact = () => {
         <FaEnvelope />
         <div className="contact-text">Info@nzconsultants.com.au</div>
       </div>
+      <ContactBarFlags />
     </div>
   );
 };

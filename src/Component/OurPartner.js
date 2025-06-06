@@ -1,79 +1,90 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import "./OurPartner.css";
 
-const partnerLogos = [
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
-  require("./img/flags/germany.png"),
+const partnerData = [
+  {
+    buildingImage: require("./img/flags/austrailia.png"),
+    logo: require("./img/flags/austrailia.png"),
+  },
+  {
+    buildingImage: require("./img/flags/austrailia.png"),
+    logo: require("./img/flags/austrailia.png"),
+  },
+  {
+    buildingImage: require("./img/flags/austrailia.png"),
+    logo: require("./img/flags/austrailia.png"),
+  },
+  {
+    buildingImage: require("./img/flags/austrailia.png"),
+    logo: require("./img/flags/austrailia.png"),
+  },
+  {
+    buildingImage: require("./img/flags/austrailia.png"),
+    logo: require("./img/flags/austrailia.png"),
+  },
+  {
+    buildingImage: require("./img/flags/austrailia.png"),
+    logo: require("./img/flags/austrailia.png"),
+  },
+  {
+    buildingImage: require("./img/flags/austrailia.png"),
+    logo: require("./img/flags/austrailia.png"),
+  },
+  // ...add more partners
 ];
 
+const SinglePartner = ({ partner }) => {
+  return (
+    <div className="partner-card-bg">
+      <div
+        className="partner-building-bg"
+        style={{ backgroundImage: `url(${partner.buildingImage})` }}
+      >
+        <div className="partner-logo-overlay">
+          <img
+            src={partner.logo}
+            alt="Partner Logo"
+            className="partner-logo-img"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const OurPartner = () => {
-  const carouselRef = useRef(null);
-
-  // Auto-scroll effect
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    let scrollAmount = 0;
-    const scrollStep = 1;
-    const scrollInterval = setInterval(() => {
-      if (carousel) {
-        carousel.scrollLeft += scrollStep;
-        scrollAmount += scrollStep;
-        // Loop back to start
-        if (
-          carousel.scrollLeft + carousel.offsetWidth >=
-          carousel.scrollWidth
-        ) {
-          carousel.scrollLeft = 0;
-          scrollAmount = 0;
-        }
-      }
-    }, 20);
-    return () => clearInterval(scrollInterval);
-  }, []);
-
-  // Manual scroll (arrows)
-  const scroll = (direction) => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-    const scrollBy = carousel.offsetWidth / 2;
-    carousel.scrollBy({
-      left: direction === "left" ? -scrollBy : scrollBy,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <div className="partner-section">
       <h2 className="partner-title">Our Partners</h2>
       <div className="partner-carousel-wrapper">
-        <button className="partner-arrow left" onClick={() => scroll("left")}>
-          &#8592;
-        </button>
-        <div className="partner-carousel" ref={carouselRef}>
-          {partnerLogos.map((logo, idx) => (
-            <div className="partner-logo-card" key={idx}>
-              <img
-                src={logo}
-                alt={`Partner ${idx + 1}`}
-                className="partner-logo-img"
-              />
-            </div>
+        <Swiper
+          modules={[Autoplay, Navigation]}
+          spaceBetween={30}
+          slidesPerView="auto"
+          centeredSlides={true}
+          loop={false}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={{
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          }}
+          className="partner-swiper"
+        >
+          {partnerData.map((partner, idx) => (
+            <SwiperSlide key={idx} className="partner-slide">
+              <SinglePartner partner={partner} />
+            </SwiperSlide>
           ))}
-        </div>
-        <button className="partner-arrow right" onClick={() => scroll("right")}>
-          &#8594;
-        </button>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
+        </Swiper>
       </div>
     </div>
   );
