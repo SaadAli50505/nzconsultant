@@ -6,6 +6,7 @@ import "./ClientTrust.css";
 import { db } from "../firebase"; // Import Firestore instance
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { Helmet } from "react-helmet";
+import googleLogo from "./img/google logo.png";
 
 function getInitials(name) {
   if (!name) return "?";
@@ -130,6 +131,11 @@ const ClientTrust = () => {
                       })}
                     </div>
                   </div>
+                  <img
+                    src={googleLogo}
+                    alt="Google logo"
+                    className="google-logo-review"
+                  />
                 </div>
               </div>
             ))}

@@ -26,6 +26,7 @@ const Footer = () => {
           <div className="footer-section">
             <FaMapMarkerAlt className="footer-icon" />
             <h3>Head Office</h3>
+            <h3>Adelaide Australia</h3>
             <p>26 Montacute Rd, Hectorville SA 5073</p>
             <div className="footer-phone-line">
               <FaPhoneAlt className="footer-icon-sm" />
@@ -35,7 +36,7 @@ const Footer = () => {
           {/* Sub Office 1 */}
           <div className="footer-section">
             <FaMapMarkerAlt className="footer-icon" />
-            <h3>Office Branch #1</h3>
+            <h3>Hafizabad Pakistan</h3>
             <p>
               Madrianwala Chowk, Opposite, Al - Haadi Resturent, Sargodha Road
               Hafizabad, Punjab Pakistan
@@ -52,8 +53,8 @@ const Footer = () => {
           {/* Sub Office 2 */}
           <div className="footer-section">
             <FaMapMarkerAlt className="footer-icon" />
-            <h3>Office Branch #2</h3>
-            <p>College Road, U Bank Basemen, Sheikhupura, Punjab Pakistan</p>
+            <h3>Sheikhupura Pakistan</h3>
+            <p>College Road, U Bank Basement, Sheikhupura, Punjab Pakistan</p>
             <div className="footer-phone-line">
               <FaPhoneAlt className="footer-icon-sm" />
               <span>+92 300 4238712</span>

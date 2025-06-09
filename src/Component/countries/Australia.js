@@ -1,7 +1,7 @@
 import React from "react";
 import "./Countries.css";
 import { Helmet } from "react-helmet";
-import ausFlag from "../img/flags/austrailia.png";
+import ausFlag from "../img/h4.avif";
 import {
   FaUniversity,
   FaGlobe,
@@ -29,7 +29,7 @@ const Australia = () => {
           borderRadius: "8px",
           overflow: "hidden",
           marginBottom: "24px",
-          height: "300px",
+          height: "500px",
         }}
       >
         <img
@@ -46,35 +46,8 @@ const Australia = () => {
             zIndex: 0,
           }}
         />
-        {/* Black overlay for dark effect */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: "rgba(0,0,0,0.55)",
-            zIndex: 1,
-            pointerEvents: "none",
-          }}
-        />
-        <h1
-          className="study-country-title"
-          style={{
-            position: "relative",
-            color: "#fff",
-            padding: "125px 0",
-            borderRadius: "8px",
-            textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
-            zIndex: 2,
-            margin: 0,
-            background: "transparent",
-          }}
-        >
-          STUDY IN AUSTRALIA
-        </h1>
       </div>
+      <h1 className="study-country-title">STUDY IN AUSTRALIA</h1>
       <p className="study-country-description">
         NZ Education Consultants have expertise in education and migration for
         students and the working class in Australia. Our trained and experienced

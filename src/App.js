@@ -8,6 +8,7 @@ import StepsTowardPr from "./Component/StepsTowardPr";
 import ClientTrust from "./Component/ClientTrust";
 import Footer from "./Component/Footer";
 import TopContact from "./Component/TopContact";
+import WhatappLogo from "./WhatappLogo";
 
 // Pages
 import StudentVisa from "./Component/pages/StudentVisa";
@@ -34,6 +35,8 @@ import Canada from "./Component/countries/Canada";
 import USA from "./Component/countries/USA";
 import Georgia from "./Component/countries/Georgia";
 import Lithuania from "./Component/countries/Lithuania";
+import SkillAssessment from "./Component/pages/SkillAssesment";
+import HealthInsurance from "./Component/pages/HealthInsurance";
 
 function App() {
   return (
@@ -71,6 +74,9 @@ function App() {
                 </div>
                 <div id="client">
                   <ClientTrust />
+                </div>
+                <div id="enroll-now">
+                  <EnroleNow />
                 </div>
               </>
             }
@@ -137,6 +143,37 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/skills-assessment"
+            element={
+              <>
+                <Helmet>
+                  <title>Skills Assessment - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Professional skills assessment services for Australian visa applications."
+                  />
+                </Helmet>
+                <SkillAssessment />
+              </>
+            }
+          />
+          <Route
+            path="/health-insurance"
+            element={
+              <>
+                <Helmet>
+                  <title>Health Insurance - NZ Education Consultants</title>
+                  <meta
+                    name="description"
+                    content="Comprehensive health insurance solutions for international students and visa holders in Australia."
+                  />
+                </Helmet>
+                <HealthInsurance />
+              </>
+            }
+          />
+
           <Route
             path="/partner-visa"
             element={
@@ -396,12 +433,11 @@ function App() {
             }
           />
         </Routes>
-        <div id="enroll-now">
-          <EnroleNow />
-        </div>
+
         <div id="footer">
           <Footer />
         </div>
+        <WhatappLogo />
       </div>
     </Router>
   );

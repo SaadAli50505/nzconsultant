@@ -90,6 +90,54 @@
   outline: none;
 }
 
+.enroll-banner-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.accreditation-heading {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.accreditation-logos {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  justify-content: center;
+}
+
+.accreditation-logo {
+  width: 270px;
+  height: 150px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  padding: 6px;
+  object-fit: contain;
+  transition: transform 0.2s;
+  display: block;
+}
+
+.accreditation-logo:hover {
+  transform: scale(1.07);
+}
+
+.enroll-banner-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
 @media (max-width: 900px) {
   .enroll-banner {
     flex-direction: column;
@@ -126,6 +174,26 @@
     display: block;
     text-align: center;
   }
+  .enroll-banner-column {
+    padding: 0;
+  }
+  .accreditation-heading {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  .accreditation-logos {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .accreditation-logo {
+    width: 80px;
+    height: 50px;
+    max-width: 80px;
+    max-height: 50px;
+    min-width: 80px;
+    min-height: 50px;
+    padding: 4px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -155,5 +223,25 @@
   .enroll-banner-text {
     font-size: 1rem;
     text-align: center;
+  }
+  .accreditation-heading {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+  .accreditation-logos {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .accreditation-logo {
+    width: 60px;
+    height: 38px;
+    max-width: 60px;
+    max-height: 38px;
+    min-width: 60px;
+    min-height: 38px;
+    padding: 2px;
+  }
+  .enroll-banner-btn-wrapper {
+    margin-top: 0;
   }
 }

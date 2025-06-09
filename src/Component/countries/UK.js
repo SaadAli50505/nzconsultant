@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import ukFlag from "../img/flags/uk.png";
+import ukFlag from "../img/countries/uk.jpg";
 
 const UK = () => {
   return (
@@ -33,7 +33,7 @@ const UK = () => {
           borderRadius: "8px",
           overflow: "hidden",
           marginBottom: "24px",
-          height: "300px",
+          height: "500px",
         }}
       >
         <img
@@ -50,34 +50,8 @@ const UK = () => {
             zIndex: 0,
           }}
         />
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: "rgba(0,0,0,0.55)",
-            zIndex: 1,
-            pointerEvents: "none",
-          }}
-        />
-        <h1
-          className="study-country-title"
-          style={{
-            position: "relative",
-            color: "#fff",
-            padding: "125px 0",
-            borderRadius: "8px",
-            textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
-            zIndex: 2,
-            margin: 0,
-            background: "transparent",
-          }}
-        >
-          STUDY IN UNITED KINGDOM
-        </h1>
       </div>
+      <h1 className="study-country-title">STUDY IN UNITED KINGDOM</h1>
       <p className="study-country-description">
         NZ Education Consultants specialize in guiding students through their
         educational journey in the United Kingdom. Our experienced team provides
@@ -114,6 +88,10 @@ const UK = () => {
           <div className="why-australia-card">
             <FaMapMarkedAlt className="why-australia-icon" />
             <span>Rich History & Culture</span>
+          </div>
+          <div className="why-australia-card">
+            <FaHeart className="why-australia-icon" />
+            <span>Dependents Allowed</span>
           </div>
         </div>
       </section>

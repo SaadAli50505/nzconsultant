@@ -55,12 +55,31 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.13);
 }
 
+.partner-logo-overlay {
+  width: 90%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  padding: 8px 0;
+  height: 50px;
+  overflow: hidden;
+}
+
 .partner-logo-img {
-  max-width: 120px;
-  max-height: 100px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
   filter: grayscale(0.2) brightness(0.98);
   transition: filter 0.2s;
+  background: none;
 }
 
 .partner-logo-card:hover .partner-logo-img {
@@ -105,6 +124,10 @@
   .partner-title {
     font-size: 1.3rem;
   }
+  .partner-card-bg {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -128,6 +151,10 @@
   .swiper-button-next:after {
     font-size: 16px !important;
   }
+  .partner-card-bg {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .partner-card-bg {
@@ -135,7 +162,7 @@
   width: 200px;
   height: 200px;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   background: #fff;
   display: flex;
   align-items: center;
@@ -158,46 +185,9 @@
   position: relative;
 }
 
-.partner-logo-overlay {
-  width: 90%;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 50%;
-  bottom: 14px;
-  transform: translateX(-50%);
-  padding: 8px 0;
-}
-
-.partner-logo-img {
+/* .partner-logo-img {
   width: 48px;
   height: 48px;
   object-fit: contain;
   background: none;
-}
-
-@media (max-width: 900px) {
-  .partner-card-bg {
-    width: 150px;
-    height: 150px;
-  }
-  .partner-logo-img {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-@media (max-width: 600px) {
-  .partner-card-bg {
-    width: 100px;
-    height: 100px;
-  }
-  .partner-logo-img {
-    width: 22px;
-    height: 22px;
-  }
-}
+} */

@@ -94,7 +94,7 @@ const Navbar = () => {
         </li>
         <li className="navbar-item dropdown" ref={dropdownRefs.countries}>
           <div onClick={() => toggleDropdown("countries")}>
-            Study Abroad &#x25BC;
+            Countries &#x25BC;
           </div>
           {isDropdownOpen.countries && (
             <ul className="dropdown-menu">
@@ -282,15 +282,25 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="dropdown-item">
-                <Link to="/parent-visa" onClick={() => setIsOpen(false)}>
-                  Parent Visa
+                <Link to="/skills-assessment" onClick={() => setIsOpen(false)}>
+                  Skills Assessment
                 </Link>
               </li>
               <li className="dropdown-item">
+                <Link to="/health-insurance" onClick={() => setIsOpen(false)}>
+                  Health Insurance
+                </Link>
+              </li>
+              {/* <li className="dropdown-item">
+                <Link to="/parent-visa" onClick={() => setIsOpen(false)}>
+                  Parent Visa
+                </Link>
+              </li> */}
+              {/* <li className="dropdown-item">
                 <Link to="/partner-visa" onClick={() => setIsOpen(false)}>
                   Partner Visa
                 </Link>
-              </li>
+              </li> */}
               <li className="dropdown-item">
                 <Link to="/other-services" onClick={() => setIsOpen(false)}>
                   Other Services
@@ -307,7 +317,7 @@ const Navbar = () => {
             duration={500}
             onClick={() => setIsOpen(false)}
           >
-            Permanent Resident
+            Permanent Residency
           </Link>
         </li>
         <li className="navbar-item">

@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 import img1 from "./img/h1.jpg";
 // import img2 from "./img/h2.jpg";
 import img3 from "./img/h3.jpg";
-import img4 from "./img/h4.jpg";
+import img4 from "./img/h4.avif";
 // import img5 from "./img/h5.jpg";
 import img6 from "./img/img6.jpg";
 import img7 from "./img/img7.jpg";
